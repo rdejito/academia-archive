@@ -6,8 +6,11 @@ function SignInPage() {
   return (
     <div className="flex min-h-screen items-center justify-center text-white">
       <div className="flex w-80 flex-col gap-4 rounded-lg bg-gray-800 p-6">
-        <div className="flex items-center justify-center">
-          <Link href="../../../../../" className="absolute left-160">
+        <div className="relative flex items-center justify-center">
+          <Link
+            href="/"
+            className="absolute left-0 rounded p-1 transition hover:bg-gray-700"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1.5em"
@@ -23,7 +26,8 @@ function SignInPage() {
               />
             </svg>
           </Link>
-          <span className="text-center text-2xl font-bold">Sign In</span>
+
+          <span className="text-2xl font-bold">Sign In</span>
         </div>
 
         <div className="flex flex-col gap-2">
@@ -32,7 +36,7 @@ function SignInPage() {
             id="name"
             type="text"
             placeholder="Enter your username..."
-            className="rounded-md border border-gray-600 bg-gray-700 p-2 outline-none focus:border-blue-500"
+            className="rounded-md border border-gray-600 bg-gray-700 p-2 outline-none focus:border-amber-500"
           />
         </div>
 
@@ -42,20 +46,22 @@ function SignInPage() {
             id="password"
             type="password"
             placeholder="Enter your password..."
-            className="rounded-md border border-gray-600 bg-gray-700 p-2 outline-none focus:border-blue-500"
+            className="rounded-md border border-gray-600 bg-gray-700 p-2 outline-none focus:border-amber-500"
           />
         </div>
 
-        <button
-          type="button"
-          className="rounded-md bg-amber-600 py-2 font-medium hover:bg-amber-700 cursor-pointer"
-        >
-          Sign In
-        </button>
+        <Link href="../../../pages/home">
+          <button
+            type="button"
+            className="rounded-md bg-amber-600 py-2 font-medium hover:bg-amber-700 cursor-pointer"
+          >
+            Sign In
+          </button>
+        </Link>
 
         <Link
           href="../auth/forgot-password"
-          className="text-center text-sm hover:text-amber-400"
+          className="text-center text-sm hover:text-amber-400 underline"
         >
           Forgot password?
         </Link>
