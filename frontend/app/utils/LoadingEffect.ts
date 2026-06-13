@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export function useLoadingRouter(delay = 2000) {
+export function useLoadingRouter(delay = 1000) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
