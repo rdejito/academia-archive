@@ -17,16 +17,15 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={lexend.className}>
-        {/* Background */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/bg-image.png')" }}
-        />
-
+      <body
+        className={`relative min-h-screen bg-fixed bg-cover bg-center bg-no-repeat ${lexend.className}`}
+        style={{ backgroundImage: "url('/bg-image.png')" }}
+      >
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/60" />
-        {children}
+
+        {/* Page content */}
+        <div className="relative z-10 min-h-screen">{children}</div>
       </body>
     </html>
   );

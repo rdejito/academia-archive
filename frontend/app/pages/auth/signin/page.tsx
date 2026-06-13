@@ -50,10 +50,10 @@ function SignInPage() {
           />
         </div>
 
-        <Link href="../../../pages/home">
+        <Link href="../../../pages/home" className="flex justify-center">
           <button
             type="button"
-            className="rounded-md bg-amber-600 py-2 font-medium hover:bg-amber-700 cursor-pointer"
+            className="rounded-md bg-amber-600 py-2 px-3 font-medium hover:bg-amber-700 cursor-pointer"
           >
             Sign In
           </button>

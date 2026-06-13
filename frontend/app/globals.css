@@ -1,24 +1,5 @@
 @import "tailwindcss";
 
-:root {
-  --foreground: #e2e1e1;
-  --bg-image: url("/bg-image.png");
-}
-
-@theme inline {
-  --color-foreground: var(--foreground);
-}
-
-body {
-  background-image: var(--bg-image);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @keyframes loading {
   from {
     width: 0%;
